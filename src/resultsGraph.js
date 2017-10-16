@@ -73,7 +73,7 @@ const ResultsGraph = (props) => {
   var options = {
     title: {
       display: true,
-        text: 'Benefit Eligibility for Household Size ' + 
+        text: 'Benefits Eligibility for Household Size ' + 
                 props.pageState.householdSize
     },
     showLines: true,

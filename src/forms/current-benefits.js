@@ -23,7 +23,7 @@ const CurrentBenefitsContent = ({ client, storeChecked }) => {
   return (
     <wrapper className={'field-aligner'}>
       <MassiveToggle
-        label={{ children: client.hasSnap ? <strong>SNAP Program</strong> : 'SNAP' }}
+        label={{ children: client.hasSnap ? <strong>SNAP Program</strong> : 'SNAP Program' }}
         checked={client.hasSnap}
         onChange={storeChecked}
         name='hasSnap' />
