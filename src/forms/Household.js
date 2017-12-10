@@ -15,6 +15,10 @@ import {
   ColumnHeading,
   ManagedNumberField
 } from './formHelpers';
+import {
+  columnStyle
+} from '../utils/stylesObjects';
+
 
 // COMPONENT HELPER FUNCTIONS
 import { getTimeSetter } from '../utils/getTimeSetter';
@@ -30,12 +34,6 @@ import { cloneDeep } from 'lodash';
 // To be able to adjust sizes easily
 // Very specific to household size. May be worth creating
 // a constructor for columns in general, or maybe use a Grid.
-const columnStyle = {
-  display: 'inline-block',
-  textAlign: 'center',
-  marginTop: '0.7em',
-  // marginBottom: '0.7em'
-};
 
 const Columns = {};
 

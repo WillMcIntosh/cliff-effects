@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Button} from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import {homePageButton, mainTitle, mainSubTitle, centerContents, titleBox, captionText} from '../utils/stylesObjects'
 
 
 class HomePage extends Component {
@@ -10,48 +11,29 @@ class HomePage extends Component {
 
         <div id='HomeContent'>
 
-          <div style={{
-          display:'inline-block'}}>
+          <div style={titleBox}>
 
-            <h1 style={{
-            fontSize: '5em',
-            color: '#efefef',
-            marginBottom: '-15px'}}>
+            <h1 style={mainTitle}>
               Cliff Effects Tool
             </h1>
 
-            <h2 style={{
-            fontSize: '2em',
-            color: '#efefef',
-            textAlign: 'right',
-            marginTop: '-15px',
-            marginRight: '45px'}}>
+            <h2 style={mainSubTitle}>
               GUIDANCE PROTOTYPE*
             </h2>
 
           </div>
 
-          <div className='center-contents' style={{
-          marginTop: '3em',
-          marginBottom: '3em'}}>
+          <div style={centerContents}>
 
             <div>
               <Link to='/visit/54321/1'>
-              <Button style={{
-                backgroundColor: '#ffffffc8',
-                textColor: '#00b5ad',
-                fontSize: '1.5em',
-                marginRight: '1.5em'}}>
+              <Button style={homePageButton}>
                 Get Started
               </Button>
               </Link>
 
               <Link to='/about'>
-              <Button style={{
-                backgroundColor: '#ffffffc8',
-                textColor: '#00b5ad',
-                fontSize: '1.5em',
-                marginLeft: '1.5em'}}>
+              <Button style={homePageButton}>
                 Learn More
               </Button>
               </Link>
@@ -59,10 +41,7 @@ class HomePage extends Component {
 
           </div>
 
-          <p style={{
-            color: '#efefef',
-            textAlign: 'center',
-            fontSize: '1em'}}>*
+          <p style={captionText}>*
             This is a prototype and should not be used to make financial decisions.
           </p>
 

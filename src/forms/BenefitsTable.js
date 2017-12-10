@@ -86,7 +86,7 @@ const   columnHeaderStyle = {
 const SNAPBenefitRow = function( props ){
   if(!currentClient.current.hasSnap ) return (null)
     return (
-      <Table.Row>
+      <Table.Row className=''>
         <Table.Cell style={rowHeaderStyle}>SNAP</Table.Cell>
         <Table.Cell textAlign='right'>${SNAPBenefitCurrent} / year</Table.Cell>
         <Table.Cell textAlign='right'>${SNAPBenefitFuture} / year</Table.Cell>
@@ -110,11 +110,11 @@ const Sec8BenefitRow  = function( props ){
 const TotalBenefitsRow = function( props ){
   if(!currentClient.current.hasSnap || !currentClient.current.hasHousing) return (null)
     return(
-      <Table.Row>
-        <Table.Cell textAlign='right' width={3} style={totalsRowHeaderStyle}>Total Benefits</Table.Cell>
-        <Table.Cell textAlign='right' width={3} style={totalsRowStyle}>${totalBenefitCurrent} / year</Table.Cell>
-        <Table.Cell textAlign='right' width={3} style={totalsRowStyle}>${totalBenefitFuture} / year</Table.Cell>
-        <Table.Cell textAlign='right' width={3} style={totalsRowStyle}>{ getSignSymbol(totalDiff) } ${Math.abs(totalDiff)} / year</Table.Cell>
+      <Table.Row >
+        <Table.Cell className='ui celled table total tr' textAlign='right' width={3} >Total Benefits</Table.Cell>
+        <Table.Cell className='ui celled table total tr' textAlign='right' width={3} >${totalBenefitFuture} / year</Table.Cell>
+        <Table.Cell className='ui celled table total tr' textAlign='right' width={3} >${totalBenefitCurrent} / year</Table.Cell>
+        <Table.Cell className='ui celled table total tr' textAlign='right' width={3} >{ getSignSymbol(totalDiff) } ${Math.abs(totalDiff)} / year</Table.Cell>
       </Table.Row>
     )
 };
